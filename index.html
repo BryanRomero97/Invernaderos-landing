@@ -206,7 +206,7 @@
       <!-- Contenido principal -->
       <div class="container mx-auto relative z-10 h-full">
         <div
-          class="flex flex-col md:flex-row h-[calc(100vh-48px)] md:h-[calc(100vh-64px)] px-4 md:px-6 py-6 md:py-8 gap-8 md:gap-6 lg:gap-8"
+          class="flex flex-col md:flex-row h-[calc(100vh-96px)] md:h-[calc(100vh-112px)] px-4 md:px-6 py-6 md:py-8 gap-8 md:gap-6 lg:gap-8"
         >
           <!-- Columna de texto -->
           <div
@@ -888,7 +888,7 @@
         },
       });
 
-      // Script para el botón "Ver Más"
+      // Script para el botón "Ver Más" y barra de redes sociales
       document.addEventListener("DOMContentLoaded", function () {
         const btnVerMas = document.getElementById("btn-ver-mas");
         const contenidoExpandible = document.getElementById(
@@ -909,6 +909,27 @@
               contenidoExpandible.classList.add("hidden");
               btnVerMas.textContent = "Ver Más";
             }
+          });
+        }
+
+        // Script para ocultar la barra de redes sociales al hacer scroll
+        let lastScrollTop = 0;
+        const socialBar = document.getElementById("social-bar");
+
+        if (socialBar) {
+          window.addEventListener("scroll", function () {
+            let scrollTop =
+              window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+              // Scrolling down - ocultar barra
+              socialBar.style.transform = "translateY(-100%)";
+            } else {
+              // Scrolling up - mostrar barra
+              socialBar.style.transform = "translateY(0)";
+            }
+
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Para móviles
           });
         }
       });
