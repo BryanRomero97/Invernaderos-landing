@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Configuración de scroll suave global */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Ajusta este valor según la altura de tu header */
+}
+
+/* Estilos para el menú */
+#menu-container.menu-open {
+    display: block !important;
+}
+
+/* Estilos para pantallas grandes (PC) */
+@media (min-width: 768px) {
+    header nav ul {
+        display: flex !important;
+    }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    header .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header h1 {
+        margin-bottom: 0;
+        font-size: 1.5rem;
+    }
+
+    header nav {
+        width: auto;
+    }
+
+    #menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+        margin-left: 1rem;
+    }
+
+    #menu-container {
+        margin-top: 0.5rem;
+        z-index: 50;
+    }
+}
+
+/* Estilos generales del header */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+/* Oculta el botón del menú en pantallas grandes */
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+}
+
+header nav ul {
+  /* Muestra el menú por defecto en pantallas grandes */
+  display: flex;
+}
+
+/* Oculta el botón del menú en pantallas grandes */
+header nav button {
+  display: none;
+}
