@@ -3,7 +3,7 @@
 @tailwind utilities; /* Configuración de scroll suave global */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 128px; /* Ajustado para incluir header + barra social mejorada */
+  scroll-padding-top: 112px; /* Ajustado para header + barra social compacta */
 } /* Estilos para el menú */
 #menu-container.menu-open {
   display: block !important;
