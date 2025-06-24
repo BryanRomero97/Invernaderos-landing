@@ -1,28 +1,20 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
-
-/* Configuración de scroll suave global */
+@tailwind utilities; /* Configuración de scroll suave global */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 140px; /* Ajustado para el nuevo header */
-}
-
-/* Estilos para el menú móvil */
+} /* Estilos para el menú móvil */
 #menu-container {
   transition: all 0.3s ease-in-out;
 }
-
 #menu-container.menu-open {
   display: block !important;
-}
-
-/* Animaciones para los enlaces de navegación */
+} /* Animaciones para los enlaces de navegación */
 .nav-link {
   position: relative;
   overflow: hidden;
 }
-
 .nav-link::after {
   content: "";
   position: absolute;
@@ -33,22 +25,17 @@ html {
   background: linear-gradient(90deg, #10b981, #059669);
   transition: width 0.3s ease;
 }
-
 .nav-link:hover::after {
   width: 100%;
-}
-
-/* Estilos responsivos mejorados */
+} /* Estilos responsivos mejorados */
 @media (max-width: 767px) {
   html {
     scroll-padding-top: 120px;
   }
-
   #menu-container {
     animation: slideDown 0.3s ease-out;
   }
 }
-
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -58,39 +45,29 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Mejoras visuales para el header */
+} /* Mejoras visuales para el header */
 header {
   backdrop-filter: blur(10px);
   background: rgba(17, 24, 39, 0.95);
-}
-
-/* Efectos hover mejorados */
+} /* Efectos hover mejorados */
 .social-icon {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .social-icon:hover {
   transform: translateY(-2px) scale(1.1);
 }
-
 .cta-button {
   background: linear-gradient(135deg, #10b981, #059669);
   box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
   transition: all 0.3s ease;
 }
-
 .cta-button:hover {
   box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
   transform: translateY(-2px);
-}
-
-/* Estilos específicos del footer */
+} /* Estilos específicos del footer */
 footer {
   position: relative;
 }
-
 footer::before {
   content: "";
   position: absolute;
@@ -105,23 +82,17 @@ footer::before {
     #3b82f6,
     transparent
   );
-}
-
-/* Animaciones para los iconos de contacto */
+} /* Animaciones para los iconos de contacto */
 .contact-icon-wrapper {
   transition: all 0.3s ease;
 }
-
 .contact-icon-wrapper:hover {
   transform: translateY(-2px);
-}
-
-/* Efectos de glow para los botones CTA */
+} /* Efectos de glow para los botones CTA */
 .footer-cta-primary {
   position: relative;
   overflow: hidden;
 }
-
 .footer-cta-primary::before {
   content: "";
   position: absolute;
@@ -137,28 +108,21 @@ footer::before {
   );
   transition: left 0.5s;
 }
-
 .footer-cta-primary:hover::before {
   left: 100%;
-}
-
-/* Responsive mejoras */
+} /* Responsive mejoras */
 @media (max-width: 768px) {
   footer .container {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-
   footer .grid {
     gap: 2rem;
   }
-
   footer .social-links {
     justify-content: center;
   }
-}
-
-/* Animación sutil para el patrón de fondo */
+} /* Animación sutil para el patrón de fondo */
 @keyframes float {
   0%,
   100% {
@@ -168,7 +132,119 @@ footer::before {
     transform: translateY(-10px);
   }
 }
-
 footer .absolute.inset-0.opacity-5 {
   animation: float 20s ease-in-out infinite;
+} /* Estilos específicos para la sección de contacto */
+#contacto {
+  position: relative;
+} /* Animaciones para los inputs del formulario */
+.form-input-focus {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.15);
+} /* Efecto de escritura en los placeholders */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+} /* Animación de pulso para el botón de WhatsApp */
+@keyframes pulse-green {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+}
+.whatsapp-pulse {
+  animation: pulse-green 2s infinite;
+} /* Efectos de hover mejorados para inputs */
+.contact-input {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-input:focus {
+  transform: translateY(-2px);
+} /* Animación de éxito */
+@keyframes success-bounce {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  40%,
+  43% {
+    transform: translate3d(0, -8px, 0);
+  }
+  70% {
+    transform: translate3d(0, -4px, 0);
+  }
+  90% {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+.success-animation {
+  animation: success-bounce 1s ease-in-out;
+} /* Efecto de shimmer para el botón de envío */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.shimmer-effect {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+} /* Responsive mejoras para la sección de contacto */
+@media (max-width: 768px) {
+  #contacto .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  #contacto .bg-white\/90 {
+    margin: 0 0.5rem;
+    padding: 1.5rem;
+  }
+  #contacto input,
+  #contacto textarea {
+    font-size: 16px; /* Previene zoom en iOS */
+  }
+} /* Animación de entrada para elementos del formulario */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slide-in {
+  animation: slideInUp 0.6s ease-out forwards;
+} /* Estados de validación visual */
+.input-valid {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+.input-invalid {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+} /* Efecto de carga en el botón */
+.button-loading {
+  background: linear-gradient(90deg, #059669, #10b981, #059669);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
 }
