@@ -1,58 +1,87 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities; /* Configuración de scroll suave global */
+@tailwind utilities;
+
+/* Configuración de scroll suave global */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 112px; /* Ajustado para header + barra social compacta */
-} /* Estilos para el menú */
+  scroll-padding-top: 140px; /* Ajustado para el nuevo header */
+}
+
+/* Estilos para el menú móvil */
+#menu-container {
+  transition: all 0.3s ease-in-out;
+}
+
 #menu-container.menu-open {
   display: block !important;
-} /* Estilos para pantallas grandes (PC) */
-@media (min-width: 768px) {
-  header nav ul {
-    display: flex !important;
-  }
-} /* Estilos para pantallas pequeñas (móviles) */
+}
+
+/* Animaciones para los enlaces de navegación */
+.nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #10b981, #059669);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Estilos responsivos mejorados */
 @media (max-width: 767px) {
-  header .container {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+  html {
+    scroll-padding-top: 120px;
   }
-  header h1 {
-    margin-bottom: 0;
-    font-size: 1.5rem;
-  }
-  header nav {
-    width: auto;
-  }
-  #menu-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-    margin-left: 1rem;
-  }
+
   #menu-container {
-    margin-top: 0.5rem;
-    z-index: 50;
-  }
-} /* Estilos generales del header */
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
-} /* Oculta el botón del menú en pantallas grandes */
-@media (min-width: 768px) {
-  #menu-toggle {
-    display: none;
+    animation: slideDown 0.3s ease-out;
   }
 }
-header nav ul {
-  /* Muestra el menú por defecto en pantallas grandes */
-  display: flex;
-} /* Oculta el botón del menú en pantallas grandes */
-header nav button {
-  display: none;
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mejoras visuales para el header */
+header {
+  backdrop-filter: blur(10px);
+  background: rgba(17, 24, 39, 0.95);
+}
+
+/* Efectos hover mejorados */
+.social-icon {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon:hover {
+  transform: translateY(-2px) scale(1.1);
+}
+
+.cta-button {
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+  transform: translateY(-2px);
 }
