@@ -85,3 +85,90 @@ header {
   box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
   transform: translateY(-2px);
 }
+
+/* Estilos específicos del footer */
+footer {
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #10b981,
+    #3b82f6,
+    transparent
+  );
+}
+
+/* Animaciones para los iconos de contacto */
+.contact-icon-wrapper {
+  transition: all 0.3s ease;
+}
+
+.contact-icon-wrapper:hover {
+  transform: translateY(-2px);
+}
+
+/* Efectos de glow para los botones CTA */
+.footer-cta-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-cta-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.footer-cta-primary:hover::before {
+  left: 100%;
+}
+
+/* Responsive mejoras */
+@media (max-width: 768px) {
+  footer .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  footer .grid {
+    gap: 2rem;
+  }
+
+  footer .social-links {
+    justify-content: center;
+  }
+}
+
+/* Animación sutil para el patrón de fondo */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+footer .absolute.inset-0.opacity-5 {
+  animation: float 20s ease-in-out infinite;
+}
