@@ -746,50 +746,369 @@
       </div>
     </section>
 
-    <section id="productos" class="py-12">
-      <div class="container mx-auto">
-        <h3 class="text-2xl font-bold text-green-700 mb-8 text-center">
-          Nuestros Productos
-        </h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="p-6 bg-white rounded-lg shadow-md">
-            <img
-              src="./images/1.jpeg"
-              alt="Invernadero Túnel"
-              class="mb-4 rounded-lg"
-            />
-            <h4 class="text-xl font-bold text-green-700 mb-2">
-              Invernadero Túnel
-            </h4>
-            <p class="text-gray-700">
-              Ideales para cultivos de ciclo corto y protección contra heladas.
-            </p>
+    <!-- Sección de Catálogo de Productos Rediseñada -->
+    <section id="productos" class="relative py-20 bg-gradient-to-br from-white via-green-50/30 to-white overflow-hidden">
+      <!-- Patrón de fondo decorativo -->
+      <div class="absolute inset-0 opacity-5">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg width=\"100\" height=\"100\" viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" fill-rule=\"evenodd\"><g fill=\"%2310b981\" fill-opacity=\"0.1\"><path d=\"M50 50m-20 0a20,20 0 1,1 40,0a20,20 0 1,1 -40,0M10 10m-5 0a5,5 0 1,1 10,0a5,5 0 1,1 -10,0M90 90m-5 0a5,5 0 1,1 10,0a5,5 0 1,1 -10,0\"/></g></g></svg>')"></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <!-- Encabezado de la sección -->
+        <div class="text-center mb-16">
+          <!-- Título principal -->
+          <div class="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg mb-6 border border-green-100">
+            <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+            </svg>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 font-montserrat">
+              Nuestros Productos
+            </h2>
           </div>
-          <div class="p-6 bg-white rounded-lg shadow-md">
-            <img
-              src="./images/2.jpg"
-              alt="Invernadero Cenital"
-              class="mb-4 rounded-lg"
-            />
-            <h4 class="text-xl font-bold text-green-700 mb-2">
-              Invernadero Cenital
-            </h4>
-            <p class="text-gray-700">
-              Óptimos para climas cálidos y ventilación natural.
-            </p>
+          
+          <!-- Subtítulo opcional -->
+          <div class="flex items-center justify-center gap-3 mb-8">
+            <div class="h-px bg-gradient-to-r from-transparent via-green-400 to-transparent flex-1 max-w-20"></div>
+            <div class="flex items-center gap-2 text-green-700">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              </svg>
+              <p class="text-lg font-semibold font-poppins">Soluciones para cada tipo de cultivo</p>
+            </div>
+            <div class="h-px bg-gradient-to-r from-transparent via-green-400 to-transparent flex-1 max-w-20"></div>
           </div>
-          <div class="p-6 bg-white rounded-lg shadow-md">
-            <img
-              src="./images/3.jpg"
-              alt="Invernadero de Cristal"
-              class="mb-4 rounded-lg"
-            />
-            <h4 class="text-xl font-bold text-green-700 mb-2">
-              Invernadero de Cristal
-            </h4>
-            <p class="text-gray-700">
-              Mayor durabilidad y control climático para cultivos exigentes.
-            </p>
+          
+          <!-- Descripción -->
+          <p class="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+            Descubre nuestra gama completa de invernaderos diseñados para maximizar tu producción agrícola. 
+            Cada producto está cuidadosamente desarrollado para diferentes necesidades y presupuestos.
+          </p>
+        </div>
+
+        <!-- Grid de productos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          
+          <!-- Producto 1: Invernadero Túnel -->
+          <div class="group product-card cursor-pointer" data-product="tunel">
+            <div class="relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-green-200 transform hover:-translate-y-2">
+              
+              <!-- Badge de categoría -->
+              <div class="absolute top-4 left-4 z-20">
+                <span class="inline-flex items-center gap-1 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                  </svg>
+                  Económico
+                </span>
+              </div>
+
+              <!-- Badge de popularidad -->
+              <div class="absolute top-4 right-4 z-20">
+                <span class="inline-flex items-center gap-1 bg-orange-500 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg animate-pulse">
+                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  Popular
+                </span>
+              </div>
+
+              <!-- Imagen del producto -->
+              <div class="relative h-64 overflow-hidden">
+                <img
+                  src="./images/1.jpeg"
+                  alt="Invernadero Túnel"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter brightness-90 contrast-110 saturate-110"
+                />
+                <!-- Overlay con gradiente -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <!-- Botón flotante "Ver más" -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                  <button class="bg-white/90 backdrop-blur-sm text-green-700 font-bold py-3 px-6 rounded-full shadow-xl hover:bg-white hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                    <span>Ver más</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Contenido de la tarjeta -->
+              <div class="p-6 space-y-4">
+                <!-- Título del producto -->
+                <div class="space-y-2">
+                  <h3 class="text-2xl font-bold text-gray-800 font-montserrat group-hover:text-green-700 transition-colors duration-300">
+                    Invernadero Túnel
+                  </h3>
+                  <div class="flex items-center gap-2 text-sm text-gray-500">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                    </svg>
+                    <span>Modelo básico</span>
+                  </div>
+                </div>
+
+                <!-- Beneficio clave -->
+                <p class="text-gray-600 leading-relaxed">
+                  <span class="font-semibold text-green-700">Ideal para principiantes:</span> 
+                  Perfecto para cultivos de ciclo corto y protección efectiva contra heladas. 
+                  Excelente relación calidad-precio.
+                </p>
+
+                <!-- Características destacadas -->
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2 text-sm text-gray-600">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Fácil instalación</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-gray-600">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Materiales resistentes</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-gray-600">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Ventilación natural</span>
+                  </div>
+                </div>
+
+                <!-- Botón de acción -->
+                <div class="pt-4">
+                  <button class="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                    </svg>
+                    <span>Solicitar Información</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 2: Invernadero Cenital -->
+          <div class="group product-card cursor-pointer" data-product="cenital">
+            <div class="relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-green-200 transform hover:-translate-y-2">
+              
+              <!-- Badge de categoría -->
+              <div class="absolute top-4 left-4 z-20">
+                <span class="inline-flex items-center gap-1 bg-green-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                  <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  Recomendado
+                </span>
+              </div>
+
+              <!-- Imagen del producto -->
+              <div class="relative h-64 overflow-hidden">
+                <img
+                  src="./images/2.jpg"
+                  alt="Invernadero Cenital"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter brightness-90 contrast-110 saturate-110"
+                />
+                <!-- Overlay con gradiente -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <!-- Botón flotante "Ver más" -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                  <button class="bg-white/90 backdrop-blur-sm text-green-700 font-bold py-3 px-6 rounded-full shadow-xl hover:bg-white hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                    <span>Ver más</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Contenido de la tarjeta -->
+              <div class="p-6 space-y-4">
+                <!-- Título del producto -->
+                <div class="space-y-2">
+                  <h3 class="text-2xl font-bold text-gray-800 font-montserrat group-hover:text-green-700 transition-colors duration-300">
+                    Invernadero Cenital
+                  </h3>
+                  <div class="flex items-center gap-2 text-sm text-gray-500">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                    </svg>
+                    <span>Modelo intermedio</span>
+                  </div>
+                </div>
+
+                <!-- Beneficio clave -->
+                <p class="text-gray-600 leading-relaxed">
+                  <span class="font-semibold text-green-700">Ventilación superior:</span> 
+                  Óptimo para climas cálidos con sistema de ventilación cenital que garantiza 
+                  el flujo de aire perfecto.
+                </p>
+
+                <!-- Características destacadas -->
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2 text-sm text-gray-600">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Ventilación cenital automática</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-gray-600">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Control de temperatura</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-gray-600">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Mayor durabilidad</span>
+                  </div>
+                </div>
+
+                <!-- Botón de acción -->
+                <div class="pt-4">
+                  <button class="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                    </svg>
+                    <span>Solicitar Información</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 3: Invernadero de Cristal -->
+          <div class="group product-card cursor-pointer" data-product="cristal">
+            <div class="relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-green-200 transform hover:-translate-y-2">
+              
+              <!-- Badge de categoría -->
+              <div class="absolute top-4 left-4 z-20">
+                <span class="inline-flex items-center gap-1 bg-purple-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  Premium
+                </span>
+              </div>
+
+              <!-- Imagen del producto -->
+              <div class="relative h-64 overflow-hidden">
+                <img
+                  src="./images/3.jpg"
+                  alt="Invernadero de Cristal"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter brightness-90 contrast-110 saturate-110"
+                />
+                <!-- Overlay con gradiente -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                
+                <!-- Botón flotante "Ver más" -->
+                <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
+                  <button class="bg-white/90 backdrop-blur-sm text-green-700 font-bold py-3 px-6 rounded-full shadow-xl hover:bg-white hover:scale-105 transition-all duration-300 flex items-center gap-2">
+                    <span>Ver más</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Contenido de la tarjeta -->
+              <div class="p-6 space-y-4">
+                <!-- Título del producto -->
+                <div class="space-y-2">
+                  <h3 class="text-2xl font-bold text-gray-800 font-montserrat group-hover:text-green-700 transition-colors duration-300">
+                    Invernadero de Cristal
+                  </h3>
+                  <div class="flex items-center gap-2 text-sm text-gray-500">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+                    </svg>
+                    <span>Modelo profesional</span>
+                  </div>
+                </div>
+
+                <!-- Beneficio clave -->
+                <p class="text-gray-600 leading-relaxed">
+                  <span class="font-semibold text-green-700">Máximo rendimiento:</span> 
+                  La opción más avanzada con control climático total. Ideal para cultivos 
+                  exigentes y producción comercial.
+                </p>
+
+                <!-- Características destacadas -->
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2 text-sm text-gray-600">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Control climático automatizado</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-gray-600">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Máxima durabilidad</span>
+                  </div>
+                  <div class="flex items-center gap-2 text-sm text-gray-600">
+                    <svg class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Transmisión de luz óptima</span>
+                  </div>
+                </div>
+
+                <!-- Botón de acción -->
+                <div class="pt-4">
+                  <button class="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                    </svg>
+                    <span>Solicitar Información</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección de llamada a la acción final -->
+        <div class="mt-20 text-center">
+          <div class="bg-gradient-to-r from-green-600 to-green-700 rounded-3xl p-8 md:p-12 shadow-2xl">
+            <div class="max-w-3xl mx-auto space-y-6">
+              <h3 class="text-2xl md:text-3xl font-bold text-white font-montserrat">
+                ¿No encuentras lo que buscas?
+              </h3>
+              <p class="text-green-100 text-lg leading-relaxed">
+                Diseñamos invernaderos personalizados según tus necesidades específicas. 
+                Nuestro equipo de expertos te ayudará a encontrar la solución perfecta para tu proyecto.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="#contacto"
+                  class="inline-flex items-center gap-2 bg-white text-green-700 font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                  </svg>
+                  <span>Consulta Personalizada</span>
+                </a>
+                <a
+                  href="https://wa.me/573001234567?text=Hola%2C%20me%20interesa%20conocer%20más%20sobre%20sus%20invernaderos%20personalizados."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 bg-green-800 hover:bg-green-900 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                >
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                  </svg>
+                  <span>WhatsApp Directo</span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

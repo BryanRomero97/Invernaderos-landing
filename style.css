@@ -247,4 +247,110 @@ footer .absolute.inset-0.opacity-5 {
   background: linear-gradient(90deg, #059669, #10b981, #059669);
   background-size: 200% 100%;
   animation: shimmer 1.5s infinite;
+} /* Estilos específicos para la sección de productos */
+.product-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.product-card:hover {
+  transform: translateY(-8px);
+} /* Filtros consistentes para las imágenes */
+.product-card img {
+  filter: brightness(0.95) contrast(1.1) saturate(1.1);
+  transition: all 0.7s ease;
+}
+.product-card:hover img {
+  filter: brightness(1.05) contrast(1.2) saturate(1.2);
+} /* Animación de badges */
+@keyframes badge-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+.product-card .animate-pulse {
+  animation: badge-pulse 2s infinite;
+} /* Efectos de hover para botones de productos */
+.product-card button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.product-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+} /* Animación de entrada para productos */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.product-card {
+  animation: slideInUp 0.6s ease-out forwards;
+}
+.product-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.product-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.product-card:nth-child(3) {
+  animation-delay: 0.3s;
+} /* Efectos de sombra mejorados */
+.product-card .shadow-lg {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.product-card:hover .shadow-2xl {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+} /* Responsive mejoras para productos */
+@media (max-width: 768px) {
+  .product-card {
+    margin-bottom: 2rem;
+  }
+  .product-card:hover {
+    transform: translateY(-4px);
+  }
+} /* Animación para el overlay de las imágenes */
+.product-card .absolute.inset-0 {
+  transition: opacity 0.5s ease;
+} /* Efecto de brillo en badges */
+.product-card span[class*="bg-"] {
+  position: relative;
+  overflow: hidden;
+}
+.product-card span[class*="bg-"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s;
+}
+.product-card:hover span[class*="bg-"]::before {
+  left: 100%;
+} /* Mejoras en la tipografía de productos */
+.product-card h3 {
+  transition: color 0.3s ease;
+}
+.product-card:hover h3 {
+  color: #059669;
+} /* Animación de check marks */
+.product-card svg[class*="text-green-500"] {
+  transition: all 0.3s ease;
+}
+.product-card:hover svg[class*="text-green-500"] {
+  transform: scale(1.1);
+  color: #10b981;
 }
